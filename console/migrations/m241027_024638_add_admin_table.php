@@ -21,7 +21,7 @@ class m241027_024638_add_admin_table extends Migration
             'email' => $this->string(50)->defaultValue('')->comment('邮箱'),
             'remark' => $this->string(300)->defaultValue('')->comment('备注'),
             'status' => $this->tinyInteger()->notNull()->defaultValue(0)->comment("状态:-2删除，-1禁用，0正常，2启用"),
-            'is_auth' => $this->tinyInteger()->notNull()->defaultValue(0)->comment("是否已审核:0-未审核，1-已审核"),
+            'is_auth' => $this->tinyInteger()->notNull()->defaultValue(0)->comment("是否已审核:0-未审核，1-已审核, -1-审核驳回"),
             'reject_reason' => $this->string(100)->defaultValue('')->comment('驳回原因'),
             'last_login_time' => 'timestamp not null default current_timestamp comment "上次登录时间"',
             'login_ip' => $this->string(255)->defaultValue('')->comment('最后登录IP'),

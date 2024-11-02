@@ -14,8 +14,9 @@ use yii\web\IdentityInterface;
  * @property string $realname 真实姓名
  * @property string $email 邮箱
  * @property string $remark 备注
- * @property int $is_active 状态:0-禁用，1-启用
+ * @property int $status 状态:-2删除，-1禁用，0正常，2启用
  * @property int $is_auth 是否已审核:0-未审核，1-已审核
+ * @property string $reject_reason 驳回原因
  * @property string $last_login_time 最后登录时间
  * @property string $login_ip 最后登录IP
  * @property string $init_password 初始密码

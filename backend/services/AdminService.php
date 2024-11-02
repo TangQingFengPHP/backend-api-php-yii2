@@ -44,6 +44,7 @@ class AdminService implements AdminServiceInterface
 
         if ($form->id <= 0) {
             $admin->password_hash = $this->adminRepository->setPassword($password);
+            $admin->init_password = $admin->password_hash;
         }
 
         return $this->adminRepository->save($admin);

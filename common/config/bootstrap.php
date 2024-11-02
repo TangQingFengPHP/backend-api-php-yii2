@@ -1,5 +1,6 @@
 <?php
 
+use common\providers\MappingServiceProvider;
 use yii\di\Instance;
 
 Yii::setAlias('@common', dirname(__DIR__));
@@ -14,6 +15,9 @@ Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
     ],
     backend\services\AdminServiceInterface::class => [
         'class' => backend\services\AdminService::class,
-        'adminRepository' => Instance::of(backend\repositories\AdminRepositoryInterface::class),
+        'repository' => Instance::of(backend\repositories\AdminRepositoryInterface::class),
     ]
 ]);
+
+// 注册DTO映射器
+MappingServiceProvider::registerMappings();

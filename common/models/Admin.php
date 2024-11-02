@@ -21,8 +21,9 @@ use yii\web\IdentityInterface;
  * @property string $login_ip 最后登录IP
  * @property string $init_password 初始密码
  */
-class Admin extends ActiveRecord implements IdentityInterface
+class Admin extends BaseModel implements IdentityInterface
 {
+//    public int $id;
     public static function tableName(): string
     {
         return '{{%admin}}';

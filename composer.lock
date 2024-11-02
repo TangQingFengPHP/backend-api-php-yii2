@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab62ad09eb9336c31b4dc6373ecf1a50",
+    "content-hash": "ade05caf99614a9bd5740ba15f43178c",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -132,6 +132,63 @@
                 "source": "https://github.com/ezyang/htmlpurifier/tree/v4.14.0"
             },
             "time": "2021-12-25T01:21:49+00:00"
+        },
+        {
+            "name": "mark-gerarts/auto-mapper-plus",
+            "version": "1.4.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mark-gerarts/automapper-plus.git",
+                "reference": "2c14575a51377c31f4efea48f89f3fe0530b499a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mark-gerarts/automapper-plus/zipball/2c14575a51377c31f4efea48f89f3fe0530b499a",
+                "reference": "2c14575a51377c31f4efea48f89f3fe0530b499a",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "mark-gerarts/phpstan-automapper-plus": "^0.1.0",
+                "phpunit/phpunit": "^7.0|^8.0",
+                "symfony/debug": "^3.3",
+                "symfony/var-dumper": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AutoMapperPlus\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Gerarts",
+                    "email": "mark.gerarts@gmail.com"
+                }
+            ],
+            "description": "An AutoMapper for PHP",
+            "keywords": [
+                "automapper",
+                "converter",
+                "object-to-object"
+            ],
+            "support": {
+                "issues": "https://github.com/mark-gerarts/automapper-plus/issues",
+                "source": "https://github.com/mark-gerarts/automapper-plus/tree/1.4.1"
+            },
+            "time": "2023-01-31T08:07:09+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2309,7 +2366,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "ext-json": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"
